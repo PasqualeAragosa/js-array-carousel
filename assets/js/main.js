@@ -1,8 +1,8 @@
-//Aggancio il div tramite la sua classe "images" nel DOM
-const imagesEl = document.querySelector('.images');
+//Seleziono il carosello
+const carouselEl = document.querySelector('.carousel');
 
-//Creo un array di immagini
-const slides = [
+//Array di immagini
+const imagesList = [
     "assets/img/01.webp",
     "assets/img/02.webp",
     "assets/img/03.webp",
@@ -10,21 +10,15 @@ const slides = [
     "assets/img/05.webp",
 ];
 
-//Creo una variabile per tenere traccia dell'immagine attiva
-let current = 0;
+//Creo una variabile per tenere traccia dell'immagine corrente
+let imageCurr = 0;
 
-// Scorro tutte le immagini
-    //aggancio il percorso dell'immagine corrente
-    //salvo in una variabile il markup
-    //inserisco il markup nel DOM
-for (let i = 0; i < slides.length; i++) {
-    const imageSrc = slides[i];
-    const imageMarkup = `<img class="${i === current ? 'active' : ''}" src="${imageSrc}" alt="">`;
-    imagesEl.insertAdjacentHTML('beforeend', imageMarkup);
+//Scorro tutte le immagini
+for (let i = 0; i < imagesList.length; i++) {
+    const  imageNow = imagesList[i];
+    const imageMark = `<img class="${i === imageCurr ? 'active' : ''}" src="${imageNow}" alt="">`;
+    carouselEl.insertAdjacentHTML("afterbegin", imageMark);
 }
-  
-
-
 
 
 
