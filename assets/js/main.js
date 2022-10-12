@@ -18,9 +18,9 @@ let current = 0;
     //salvo in una variabile il markup
     //inserisco il markup nel DOM
 for (let i = 0; i < slides.length; i++) {
-    const slideSrc = slides[i];
-    const slideMarkup = `<img class="${i === current ? 'active' : ''}" src="${slideSrc}" alt="">`;
-    imagesEl.insertAdjacentHTML('beforeend', slideMarkup);
+    const imageSrc = slides[i];
+    const imageMarkup = `<img class="${i === current ? 'active' : ''}" src="${imageSrc}" alt="">`;
+    imagesEl.insertAdjacentHTML('beforeend', imageMarkup);
 }
   
 
