@@ -28,14 +28,15 @@ img {
 /* #endregion Header */
 
 /* #region Main */
-.images {
+/* .images {
     background-image: url('../img/01.webp');
     background-image: url('../img/02.webp');
     background-image: url('../img/03.webp');
     background-image: url('../img/04.webp');
     background-image: url('../img/05.webp');
     background-repeat: no-repeat;
-}
+} */
+
 /* #endregion Main */
 
 /* #region Footer */

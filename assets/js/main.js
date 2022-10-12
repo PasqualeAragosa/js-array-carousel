@@ -8,6 +8,7 @@ containerEl.append(divEl);
 divEl.classList.add('images');
 //Aggancio il div tramite la sua classe
 let imagesEl = document.querySelector('.images');
+imagesEl.src = 'img/01.webp';
 
 
 
