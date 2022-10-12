@@ -26,14 +26,6 @@ i {
 
 /* #endregion Debug */
 
-/* #region Utilities */
-
-/* #endregion Utilities */
-
-/* #region Header */
-
-/* #endregion Header */
-
 /* #region Main */
 .images {
     height: 800px;
@@ -70,7 +62,3 @@ i:hover {
     right: 50%;
 } 
 /* #endregion Main */
-
-/* #region Footer */
-
-/* #endregion Footer */
