@@ -3,24 +3,29 @@ const imagesEl = document.querySelector('.images');
 
 //Creo un array di immagini
 const slides = [
-    'img/01.webp',
-    'img/02.webp',
-    'img/03.webp',
-    'img/04.webp',
-    'img/05.webp',
+    "assets/img/01.webp",
+    "assets/img/02.webp",
+    "assets/img/03.webp",
+    "assets/img/04.webp",
+    "assets/img/05.webp",
 ];
 
 
 imagesEl.append(slides[0]);
 
+// let current = 0;
 
 
-//Scorro tutte le immagini
+// // loop inside the array
 // for (let i = 0; i < slides.length; i++) {
-//     const slideEl = slides[i];
-//     const slideMarkup = `<img class="active" src=>`;
-    
+//     const slideUrl = slides[i];
+//     const slideMarkup = `<img class="${i === current ? 'active' : ''}" src="${slideUrl}" alt="">`
+//     imagesEl.insertAdjacentHTML('beforeend', slideMarkup)
 // }
+  
+
+
+
 
 
 
