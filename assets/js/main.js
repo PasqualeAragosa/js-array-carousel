@@ -10,18 +10,18 @@ const slides = [
     "assets/img/05.webp",
 ];
 
+//Creo una variabile per tenere traccia dell'immagine attiva
+let current = 0;
 
-imagesEl.append(slides[0]);
-
-// let current = 0;
-
-
-// // loop inside the array
-// for (let i = 0; i < slides.length; i++) {
-//     const slideUrl = slides[i];
-//     const slideMarkup = `<img class="${i === current ? 'active' : ''}" src="${slideUrl}" alt="">`
-//     imagesEl.insertAdjacentHTML('beforeend', slideMarkup)
-// }
+// Scorro tutte le immagini
+    //aggancio il percorso dell'immagine corrente
+    //salvo in una variabile il markup
+    //inserisco il markup nel DOM
+for (let i = 0; i < slides.length; i++) {
+    const slideSrc = slides[i];
+    const slideMarkup = `<img class="${i === current ? 'active' : ''}" src="${slideSrc}" alt="">`;
+    imagesEl.insertAdjacentHTML('beforeend', slideMarkup);
+}
   
 
 
