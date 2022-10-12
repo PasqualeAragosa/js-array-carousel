@@ -1,14 +1,14 @@
-//Aggancio il container
-const containerEl = document.querySelector('.container');
-//Creo un div
-const divEl = document.createElement('div');
-//Inserisco il div nel container
-containerEl.append(divEl);
-//Aggiungo al div la classe 'images'
-divEl.classList.add('images');
-//Aggancio il div tramite la sua classe
-let imagesEl = document.querySelector('.images');
-imagesEl.src = 'img/01.webp';
+const imagesEl = document.querySelector('.images');
+
+const slides = [
+    'img/01.jpg',
+    'img/02.jpg',
+    'img/03.jpg',
+    'img/04.jpg',
+    'img/05.jpg',
+];
+
+
 
 
 
