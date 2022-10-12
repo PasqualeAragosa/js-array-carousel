@@ -19,12 +19,3 @@ for (let i = 0; i < imagesList.length; i++) {
     const imageMark = `<img class="${i === imageCurr ? 'active' : ''}" src="${imageNow}" alt="">`;
     carouselEl.insertAdjacentHTML("afterbegin", imageMark);
 }
-
-
-
-
-
-
-
-
-
