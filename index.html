@@ -1,41 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <title>Carosello</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CDN link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- BS to CSS link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- CSS link -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Questa Pagina è stata creata da Rodrigo Fantechi">
+    <meta name="keywords" content="Rodrigo,Fantechi,Webpage">
+    <meta name="author" content="Rodrigo Fantechi">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <title>js-array-carousel</title>
 </head>
+
 <body>
-    
-    <div class="container d-flex justify-content-center my-5">
-        <div class="carousel"></div>
-        <!-- /.carousel -->
-        <div class="controls">
-            <div class="btn_top p-2">
-                <i class="fa-solid fa-sort-up"></i>
+
+
+    <div class="container my-5">
+        <div class="slider">
+            <div class="slides">
+                <!-- <img src="./assets/img/01.webp" alt="" class="img-fluid active">
+                <img src="./assets/img/02.webp" alt="" class="img-fluid">
+                <img src="./assets/img/03.webp" alt="" class="img-fluid">
+                <img src="./assets/img/04.webp" alt="" class="img-fluid">
+                <img src="./assets/img/05.webp" alt="" class="img-fluid"> -->
             </div>
-            <!-- /.btn_top -->
-            <div class="btn_down">
-                <i class="fa-solid fa-sort-down"></i>
+            <!-- /.slides -->
+            <div class="controls">
+                <div class="prev">
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+                <!-- /.prev -->
+                <div class="next">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <!-- /.next -->
             </div>
-            <!-- /.btn_down -->
+            <!-- /.controls -->
         </div>
-        <!-- /.controls -->
+        <!-- /.slider -->
     </div>
     <!-- /.container -->
-    
 
-    <!-- JS link-->
-    <script src="./assets/js/main.js"></script>
-    <!-- BS to JS link -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <!-- SCRIPT -->
+    <script src="assets/js/main.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
