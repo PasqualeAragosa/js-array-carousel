@@ -33,7 +33,7 @@ for (let i = 0; i < imagesArray.length; i++) {
 let nextSlide;
 let nextThumb;
 
-topEl.addEventListener('click', function() {
+downEl.addEventListener('click', function() {
   //Quando clicco il pulsante top la classe active passa all'immagine successiva(lo stesso per la thumb)
   //Seleziono l'immagini active
   const activeImg =  document.querySelector('.slides > img.active');
@@ -62,7 +62,7 @@ topEl.addEventListener('click', function() {
 let prevSlide;
 let prevThumb;
 
-downEl.addEventListener('click', function() {
+topEl.addEventListener('click', function() {
   //Quando clicco il pulsante top la classe active passa all'immagine successiva(lo stesso per la thumb)
   //Seleziono l'immagini active
   const activeImg =  document.querySelector('.slides > img.active');
