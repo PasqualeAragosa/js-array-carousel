@@ -1,63 +1,50 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Questa Pagina è stata creata da Rodrigo Fantechi">
-    <meta name="keywords" content="Rodrigo,Fantechi,Webpage">
-    <meta name="author" content="Rodrigo Fantechi">
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- CSS -->
+    <title>Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>js-array-carousel</title>
-</head>
+  </head>
+  <body>
 
-<body>
-
-
-    <div class="container my-5">
-        <div class="slider">
-            <div class="slides">
-                <!-- <img src="./assets/img/01.webp" alt="" class="img-fluid active">
-                <img src="./assets/img/02.webp" alt="" class="img-fluid">
-                <img src="./assets/img/03.webp" alt="" class="img-fluid">
-                <img src="./assets/img/04.webp" alt="" class="img-fluid">
-                <img src="./assets/img/05.webp" alt="" class="img-fluid"> -->
-            </div>
-            <!-- /.slides -->
-            <div class="controls">
-                <div class="prev">
-                    <i class="fas fa-chevron-up"></i>
-                </div>
-                <!-- /.prev -->
-                <div class="next">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <!-- /.next -->
-            </div>
-            <!-- /.controls -->
+    <div class="container">
+      <div class="slides">
+        <!-- 
+        <div class="image_slides spiderman"></div>
+        <div class="image_slides ratchet"></div>
+        <div class="image_slides fortnite"></div>
+        <div class="image_slides cat"></div>
+        <div class="image_slides avengers"></div> 
+        -->
+      </div>
+      <!-- /.slides -->
+      <div class="thumbs">
+        <!-- 
+        <div class="image_thumbs spiderman"></div>
+        <div class="image_thumbs ratchet"></div>
+        <div class="image_thumbs fortnite"></div>
+        <div class="image_thumbs cat"></div>
+        <div class="image_thumbs avengers"></div>
+        -->
+        <div class="controls">
+          <div class="arrows">
+            <div class="top"><i class="fa-solid fa-caret-up"></i></div>
+          <!-- /.top -->
+          <div class="down"><i class="fa-solid fa-caret-down"></i></div>
+          <!-- /.down -->
+          </div>
+          <!-- /.arrows -->
         </div>
-        <!-- /.slider -->
+        <!-- /.controls -->
+      </div>
+      <!-- /.thums -->
     </div>
     <!-- /.container -->
-
-    <!-- SCRIPT -->
-    <script src="assets/js/main.js"></script>
-    <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-</body>
-
+    
+    
+    <script src='./assets/js/main.js'></script>
+  </body>
 </html>

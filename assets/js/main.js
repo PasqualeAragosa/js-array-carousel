@@ -1,66 +1,90 @@
-const slides = [
-    './assets/img/01.webp',
-    './assets/img/02.webp',
-    './assets/img/03.webp',
-    './assets/img/04.webp',
-    './assets/img/05.webp'
-];
+const imagesArray = [
+  'assets/img/01.webp',
+  'assets/img/02.webp',
+  'assets/img/03.webp',
+  'assets/img/04.webp',
+  'assets/img/05.webp'
+]
+const classArray = [
+  'spiderman',
+  'ratchet',
+  'fortnite',
+  'cat',
+  'avengers'
+]
+const slidesEl = document.querySelector('.slides');
+const thumbsEl = document.querySelector('.thumbs');
+const topEl = document.querySelector('.top');
+const downEl = document.querySelector('.down');
 
-//Seleziono elementi della DOM
-const slidesElement = document.querySelector('.slides');
-const nextEl = document.querySelector('.next');
-const prevEl = document.querySelector('.prev');
+let current = 0;
 
-//Seleziono l'indice dell'immagine 
-let activeImg = 0;
-
-//Inserisco dinamicamente le immagini
-for (let i = 0; i < slides.length; i++) {
-    const slideUrl = slides[i];
-    const imgMarkup = `<img src="${slideUrl}" alt="" class="img-fluid ${i === activeImg ? 'active' : ''}">`;
-    slidesElement.insertAdjacentHTML('beforeend', imgMarkup); 
+for (let i = 0; i < imagesArray.length; i++) {
+  //Salvo il percorso dell'immagine
+  const imagePath = imagesArray[i];
+  //Salvo il percorso della classe
+  const classPath = classArray[i];
+  //Aggiungo 1 alla volta le immagini lasciando active la prima
+  slidesEl.insertAdjacentHTML('afterbegin', `<img class= "image_slides ${classPath} ${i === current ? 'active' : ''}" src="${imagePath}" alt="">`);
+  //Aggiungo 1 alla volta le immagini lasciando non opaca la prima
+  thumbsEl.insertAdjacentHTML('afterbegin', `<img class= "image_thumbs ${classPath} ${i === current ? 'opacity' : ''}" src="${imagePath}" alt="">`);
 }
 
 let nextSlide;
+let nextThumb;
 
-//Aggiungo event Listener alla freccia next
-nextEl.addEventListener('click', function() {
-    //Seleziono l'immagine attiva
-    const activeSlideEl = document.querySelector('.slides > img.active');
-    //Rimuovo la classe active dall'immagine attiva
-    activeSlideEl.classList.remove('active');
-    //Inremento l'indice
-    activeImg++;
-    console.log('activeImg: ', activeImg);
-    //Creo un array selezionando tutte le immagini
-    const allSlides = document.getElementsByClassName('img-fluid');
-    //
-    if (activeImg === 5) {
-        activeImg = 0;
-    } else {
-        //Seleziono l'immagine successiva
-        nextSlide = allSlides[activeImg];
-    }
-    //Gli aggiungo la classe active
-    nextSlide.classList.add('active');
-
+topEl.addEventListener('click', function() {
+  //Quando clicco il pulsante top la classe active passa all'immagine successiva(lo stesso per la thumb)
+  //Seleziono l'immagini active
+  const activeImg =  document.querySelector('.slides > img.active');
+  //Seleziono l'immagine opacity_none
+  const opacityImg = document.querySelector('.thumbs > img.opacity');
+  //Rimuovo la variabile active
+  activeImg.classList.remove('active');
+  opacityImg.classList.remove('opacity');
+  //Incremento la variabile contatore
+  current++;
+  const allImg = document.getElementsByClassName('image_slides');
+  const allThumbs = document.getElementsByClassName('image_thumbs');
+  if (current === 5) {
+    current = 0;
+    nextSlide = allImg[current];
+    nextThumb = allThumbs[current];
+  } else {
+    nextSlide = allImg[current];
+    nextThumb = allThumbs[current];
+  }
+  //Assegno la classe active all'immagine seguente
+  nextSlide.classList.add('active');
+  nextThumb.classList.add('opacity');
 });
 
 let prevSlide;
+let prevThumb;
 
-//Aggiungo event Listener alla freccia prev
-prevEl.addEventListener('click', function() {
-    const activeSlideEl = document.querySelector('.slides > img.active');
-    activeSlideEl.classList.remove('active');
-    activeImg--;
-    console.log('activeImg: ', activeImg);
-    const allSlides = document.getElementsByClassName('img-fluid');
-    if (activeImg === -1) {
-        activeImg = 4;
-        console.log('if - activeImg: ', activeImg);
-    } else {
-        prevSlide = allSlides[activeImg];
-    }
-    prevSlide = allSlides[activeImg];
-    prevSlide.classList.add('active');
+downEl.addEventListener('click', function() {
+  //Quando clicco il pulsante top la classe active passa all'immagine successiva(lo stesso per la thumb)
+  //Seleziono l'immagini active
+  const activeImg =  document.querySelector('.slides > img.active');
+  //Seleziono l'immagine opacity_none
+  const opacityImg = document.querySelector('.thumbs > img.opacity');
+  //Rimuovo la variabile active
+  activeImg.classList.remove('active');
+  opacityImg.classList.remove('opacity');
+  //Incremento la variabile contatore
+  current--;
+  const allImg = document.getElementsByClassName('image_slides');
+  const allThumbs = document.getElementsByClassName('image_thumbs');
+  if (current === -1) {
+    current = 4;
+    prevSlide = allImg[current];
+    prevThumb = allThumbs[current];
+  } else {
+    prevSlide = allImg[current];
+    prevThumb = allThumbs[current];
+  }
+  //Assegno la classe active all'immagine seguente
+  prevSlide.classList.add('active');
+  prevThumb.classList.add('opacity');
 });
+

@@ -1,49 +1,117 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
+img {
+    max-width: 100%;
 }
 
-.slider {
+i {
+    font-size: 50px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbs {
+    height: 600px;
+    width: 250px;
     position: relative;
 }
 
-.slides img {
-    width: 100%;
-    height: 500px;
+.image_slides {
+    width: 600px;
+    height: 600px;
     object-fit: cover;
-}
-
-.slides img:not(img.active) {
     display: none;
 }
 
-.slides img.active {
+.image_thumbs {
+    height: calc((100% / 5));
+    width: 100%;
+    margin-bottom: -3.7px;
+    opacity: 0.5;
+}
+
+.active {
     display: block;
+}
+
+.opacity {
+    opacity: 1;
 }
 
 .controls {
     position: absolute;
     top: 0%;
-    left: 50%;
-    translate: -50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
     height: 100%;
 }
 
-.prev,
-.next {
-    margin: 0.25rem;
-    width: 2rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background-color: white;
-    line-height: 2rem;
-    text-align: center;
+.arrows {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
+
+.top,
+.down {
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.spiderman {
+    background-image: url('../img/01.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+.ratchet {
+    background-image: url('../img/02.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+.fortnite {
+    background-image: url('../img/03.webp');
+    background-position-x: right;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cat {
+    background-image: url('../img/04.webp');
+    background-position-y: center;
+    background-position-x: right;
+    background-size: cover;
+}
+
+.avengers {
+    background-image: url('../img/05.webp');
+    background-position: center;
+    background-size: cover;
+}
+
